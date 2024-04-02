@@ -26,3 +26,11 @@ function longest(s1, s2) {
   }
   return uniq;
 }
+
+// Or
+Array.from(new Set(s1 + s2))
+  .sort()
+  .join("");
+
+//Or
+const longest = (s1, s2) => [...new Set(s1 + s2)].sort().join("");
